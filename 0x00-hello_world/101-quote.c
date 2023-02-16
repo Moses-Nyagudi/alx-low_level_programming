@@ -1,4 +1,3 @@
-#!/bin/bash
 #include <studio.h>
 /**
  * Function that returns 1 as its output
