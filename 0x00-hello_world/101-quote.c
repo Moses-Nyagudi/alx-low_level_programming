@@ -1,16 +1,17 @@
-#include <studio.h>
+#include <stdio.h>
 /**
- * Function that returns 1 as its output
- */
+  * main - entry point to the program
+  * Return: the function will return a value of 1
+  */
 int main(void)
 {
-	int number = 0;
-	char quote = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int n = 0;
+	char st[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	while (quote[number] != '\0')
+	while (st[n] != '\0')
 	{
-		putchar(quote[number]);
-		number++;
+		putchar(st[n]);
+		n++;
 	}
-	return(1);
+	return (1);
 }

@@ -1,21 +1,25 @@
 #include <stdio.h>
+/**
+  * main - entry point for the program
+  * Return: returns 0 if the program is successful
+  */
 int main(void)
 {
-	int variable_1;
-	long int variable_2;
-	long long int variable_3;
-	char variable_4;
-	float variable_5;
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
 	printf("Size of a char: %lu byte(s)\n",
-			(unsigned long)(sizeof(variavle_4)));
+			(unsigned long)(sizeof(d)));
 	printf("Size of an int: %lu byte(s)\n",
-			(unsigned long)sizeof(variable_1));
+			(unsigned long)sizeof(a));
 	printf("Size of a long int: %lu byte(s)\n",
-			(unsigned long)sizeof(variable_2));
+			(unsigned long)sizeof(b));
 	printf("Size of a long long int: %lu byte(s)\n",
-			(unsigned long)sizeof(variable_3));
+			(unsigned long)sizeof(c));
 	printf("Size of a float: %lu byte(s)\n",
-			(unsigned long)sizeof(variable_5));
+			(unsigned long)sizeof(f));
 	return (0);
 }

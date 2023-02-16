@@ -1,7 +1,7 @@
-#!/bin/bash
-#include <studio.h>
+#include <stdio.h>
 /**
- * return zero
+ * main - entry point of the program
+ * Return:  Returns a value of zero
  */
 int main(void)
 {
