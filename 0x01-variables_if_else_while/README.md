@@ -1,0 +1,1 @@
+Conditional statements are those statements where a hypothesis is followed by a conclusion. It is also known as an " If-then" statement. If the hypothesis is true and the conclusion is false, then the conditional statement is false.
