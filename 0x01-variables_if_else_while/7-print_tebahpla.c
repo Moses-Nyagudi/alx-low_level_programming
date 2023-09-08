@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - main entry point of the program
- * Description -  prints the alphabet in lowercase, followed by a new line.
- * return:0 exit point
+ * main - main block
+ * Description: Print the alphabet in reverse order in lowercase.
+ * Return: 0
  */
 
 int main(void)

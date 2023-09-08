@@ -1,29 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - main block
- * Description: Print all possible combinations fo single-digit numbers.
- * Return: 0
+ * main - prints the alphabet in lowercase,
+ * followed by a new line, except q and e
+ * Return: Aways 0 (Sucess)
  */
 
 int main(void)
 {
-	int first_digit;
-	int last_digit;
+	char c = 'a';
 
-	for (first_digit = 0; first_digit < 10; first_digit++)
+	while (c <= 'z')
 	{
-		for (last_digit = 0; last_digit < 10; last_digit++)
+		if (c != 'e' && c != 'q')
 		{
-			putchar('0' + first_digit);
-			putchar(',');
-			putchar(' ');
-			putchar('0' + last_digit);
-			putchar(' ');
+			putchar(c);
 		}
+		c++;
 	}
 
 	putchar('\n');
-
 	return (0);
 }

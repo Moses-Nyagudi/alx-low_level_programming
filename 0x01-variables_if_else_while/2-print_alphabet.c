@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - entry point of the program
- * Description :  prints the alphabet in lowercase, followed by a new line.
- * return:0 exit point
+ * main - main block
+ * Description: Use `putchar` function to print the alphabet in lowercase.
+ * Return: 0
  */
 
 int main(void)
