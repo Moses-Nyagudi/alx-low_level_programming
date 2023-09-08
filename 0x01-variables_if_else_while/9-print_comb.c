@@ -1,24 +1,28 @@
 #include <stdio.h>
 
 /**
- * main - prints the alphabet in lowercase,
- * followed by a new line, except q and e
- * Return: Aways 0 (Sucess)
+ * main - main block
+ * Description: Print all possible combinations fo single-digit numbers.
+ * Numbers must be separated by commas and a space.
+ * You can only use `putchar` to print to console
+ * You can only use `putchar` up to four times.
+ * You are not allowed to use any variable of type `char`.
+ * Return: 0
  */
 
 int main(void)
 {
-	char c = 'a';
+	int x;
 
-	while (c <= 'z')
+	for (x = 48; x < 58; x++)
 	{
-		if (c != 'e' && c != 'q')
+		putchar(x);
+		if (x < 57)
 		{
-			putchar(c);
+			putchar(44);
+			putchar(32);
 		}
-		c++;
 	}
-
 	putchar('\n');
 	return (0);
 }
