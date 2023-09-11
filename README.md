@@ -1,4 +1,4 @@
-#0x00 - C - Hello, World
+# 0x00 - C - Hello, World
 ```
 Why C programming is awesome
 Who invented C
@@ -14,7 +14,7 @@ What is the official C coding style and how to check your code with betty-style
 How to find the right header to include in your source code when using a standard library function
 How does the main function influence the return value of the program
 ```
-#0x001 - C - Variables, if, else, while
+# 0x001 - C - Variables, if, else, while
 ```
 What are the arithmetic operators and how to use them
 What are the logical operators (sometimes called boolean operators) and how to use them
