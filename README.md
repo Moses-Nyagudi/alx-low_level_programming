@@ -42,3 +42,25 @@ Scope of variables
 What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
 What are header files and how to to use them with #include
 ```
+# 0x03. C - Debugging
+```
+What is debugging
+What are some methods of debugging manually
+How to read the error messag
+```
+# 0x04. C - More functions, more nested loops:wq
+```
+What are nested loops and how to use them
+What is a function and how do you use functions
+What is the difference between a declaration and a definition of a function
+What is a prototype
+Scope of variables
+```
+# 0x05. C - Pointers, arrays and strings
+```
+What are pointers and how to use them
+What are arrays and how to use them
+What are the differences between pointers and arrays
+How to use strings and how to manipulate them
+Scope of variables
+```
