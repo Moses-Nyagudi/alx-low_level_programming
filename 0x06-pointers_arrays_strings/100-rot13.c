@@ -9,28 +9,21 @@
 
 char *rot13(char *s)
 {
-	char *ptr = s;
+	int i, j;
 
-	char *rot13_lowercase = "nopqrstuvwxyzabcdefghijklm";
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	char *rot13_uppercase = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-
-	while (*ptr)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		int index;
-
-		if (*ptr >= 'a' && *ptr <= 'z')
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			index = *ptr - 'a';
-			*ptr = rot13_lowercase[index];
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
 		}
-		else if (*ptr >= 'A' && *ptr <= 'Z')
-		{
-			index = *ptr - 'A';
-			*ptr = rot13_uppercase[index];
-		}
-
-		ptr++;
 	}
 
 	return (s);
