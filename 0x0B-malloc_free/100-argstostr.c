@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		arg_length = 0;
 	}
 
-	concatenated = malloc(total_length * sizeof(char));
+	concatenated = malloc((total_length + 1) * sizeof(char));
 
 	if (concatenated == NULL)
 		return (NULL);
