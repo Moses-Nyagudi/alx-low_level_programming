@@ -8,18 +8,12 @@
  *         If malloc fails, it causes normal
  *         process termination with status 98.
  */
-
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+	void *p = malloc(b);
 
-	ptr = malloc(b);
-
-	if (ptr == NULL)
+	if (p == NULL)
 		exit(98);
 
-	return (ptr);
+	return (p);
 }
-
-
-
