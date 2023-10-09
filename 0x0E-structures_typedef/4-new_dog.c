@@ -33,6 +33,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	new_dog_ptr->age = age;
-	printf("\n");
 	return (new_dog_ptr);
 }
