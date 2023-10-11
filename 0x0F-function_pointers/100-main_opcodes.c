@@ -11,11 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-	int num_bytes = atoi(argv[1]);
 
-	unsigned char *main_ptr = (unsigned char *)main;
-
-	int i;
+	int i, num_bytes;
 
 	if (argc != 2)
 	{
@@ -23,20 +20,27 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (num_bytes < 0)
+	num_bytes = atoi(argv[1]);
+
+	if (num_bytes <= 0)
 	{
 		printf("Error\n");
 		return (2);
 	}
 
+	unsigned char *main_ptr = (unsigned char *)main;
+
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x", main_ptr[i]);
-		if (i < num_bytes - 1)
-			printf(" ");
+		if (i == num_bytes - 1)
+		{
+			printf("%02hhx\n", main_ptr[i]);
+		}
+		else
+		{
+			printf("%02hhx ", main_ptr[i]);
+		}
 	}
-
-	printf("\n");
 
 	return (0);
 
