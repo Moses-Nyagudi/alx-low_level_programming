@@ -39,8 +39,8 @@ void print_all(const char * const format, ...)
 						printf("%s(nil)", separator);
 					else
 						printf("%s%s", separator, str);
+					break;
 				}
-				break;
 			default:
 				break;
 		}
