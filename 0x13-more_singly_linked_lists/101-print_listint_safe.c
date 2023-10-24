@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * print_listint_safe - Prints a listint_t linked list and exits on failure.
  * @head: A pointer to the head of the list.
@@ -7,33 +6,49 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t count = 0;
+	size_t node_count = 0;
 
-	const listint_t *tortoise, *hare;
+	listint_t *visited_nodes = NULL;
 
-	tortoise = hare = head;
+	listint_t *new_node, *check_node;
 
-	while (hare != NULL && hare->next != NULL)
+	while (head != NULL)
 	{
-		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
-		count++;
+		new_node = malloc(sizeof(listint_t));
 
-		tortoise = tortoise->next;
-		hare = hare->next->next;
-
-		if (tortoise == hare)
-		{
-			printf("-> [%p] %d\n", (void *)tortoise, tortoise->n);
-			printf("Error: Infinite loop detected\n");
+		if (new_node == NULL)
 			exit(98);
+
+		new_node->n = head->n;
+		new_node->next = visited_nodes;
+		visited_nodes = new_node;
+
+		check_node = visited_nodes;
+		while (check_node->next != NULL)
+		{
+			check_node = check_node->next;
+			if (head == check_node)
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				 while (visited_nodes != NULL)
+				 {
+					 new_node = visited_nodes;
+					 visited_nodes = visited_nodes->next;
+					 free(new_node);
+				 }
+				return (node_count);
+			}
 		}
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+		node_count++;
 	}
-
-	if (tortoise != NULL)
+	while (visited_nodes != NULL)
 	{
-		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
-		count++;
+		new_node = visited_nodes;
+		visited_nodes = visited_nodes->next;
+		free(new_node);
 	}
-
-	return (count);
+	return (node_count);
 }
+
