@@ -1,159 +1,98 @@
-# 0x00 - C - Hello, World
-```
-Why C programming is awesome
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
-```
-# 0x001 - C - Variables, if, else, while
-```
-What are the arithmetic operators and how to use them
-What are the logical operators (sometimes called boolean operators) and how to use them
-What the the relational operators and how to use them
-What values are considered TRUE and FALSE in C
-What are the boolean operators and how to use them
-How to use the if, if ... else statements
-How to use comments
-How to declare variables of types char, int, unsigned int
-How to assign values to variables
-How to print the values of variables of type char, int, unsigned int with printf
-How to use the while loop
-How to use variables with the while loop
-How to print variables using printf
-What is the ASCII character set
-What are the purpose of the gcc flags -m32 and -m64
-```
-# 0x02. C - Functions, nested loops
-```
-What are nested loops and how to use them
-What is a function and how do you use functions
-What is the difference between a declaration and a definition of a function
-What is a prototype
-Scope of variables
-What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
-What are header files and how to to use them with #include
-```
-# 0x03. C - Debugging
-```
-What is debugging
-What are some methods of debugging manually
-How to read the error messag
-```
-# 0x04. C - More functions, more nested loops:wq
-```
-What are nested loops and how to use them
-What is a function and how do you use functions
-What is the difference between a declaration and a definition of a function
-What is a prototype
-Scope of variables
-```
-# 0x05. C - Pointers, arrays and strings
-```
-What are pointers and how to use them
-What are arrays and how to use them
-What are the differences between pointers and arrays
-How to use strings and how to manipulate them
-Scope of variables
-```
-# 0x06. C - More pointers, arrays and strings
-```
-What are pointers and how to use them
-What are arrays and how to use them
-What are the differences between pointers and arrays
-How to use strings and how to manipulate them
-Scope of variables
-```
-# 0x07. C - Even more pointers, arrays and strings
-```
-What are pointers to pointers and how to use them
-What are multidimensional arrays and how to use them
-What are the most common C standard library functions to manipulate strings
-```
-# 0x08. C - Recursion
-```
-What is recursion
-How to implement recursion
-In what situations you should implement recursion
-In what situations you shouldn’t implement recursion
-```
-# 0x09. C - Static libraries
-```
-What is a static library, how does it work, how to create one, and how to use it
-Basic usage of ar, ranlib, nm
-```
-# 0x0A. C - argc, argv
-```
-How to use arguments passed to your program
-What are two prototypes of main that you know of, and in which case do you use one or the other
-How to use __attribute__((unused)) or (void) to compile functions with unused variables or parameters
-```
-# 0x0B-malloc_free
-```
-What is the difference between automatic and dynamic allocation
-What is malloc and free and how to use them
-Why and when use malloc
-How to use valgrind to check for memory leak
-```
-# 0x0C. C - More malloc, free
-```
-How to use the exit function
-What are the functions calloc and realloc from the standard library and how to use them
-```
-# 0x0E. C - Structures, typedef
-```
-What are structures, when, why and how to use them
-How to use typedef
-```
-# 0x0D. C - Preprocessor
-```
-What are macros and how to use them
-What are the most common predefined macros
-How to include guard your header files
-```
-# 0x0F. C - Function pointers
-```
-What are function pointers and how to use them
-What does a function pointer exactly hold
-Where does a function pointer point to in the virtual memory
-```
-# 0x10. C - Variadic functions
-```
-What are variadic functions
-How to use va_start, va_arg and va_end macros
-Why and how to use the const type qua
-```
-# 0x12. C - Singly linked lists
-```
-When and why using linked lists vs arrays
-How to build and use linked lists
-```
-# 0x13. C - More singly linked lists
-```
-How to use linked lists
-Start to look for the right source of information without too much help
-```
-0x14. C - Bit manipulation
-```
-How to manipulate bits and use bitwise operators
-```
-0x15. C - File I/O
-```
-Look for the right source of information online
-How to create, open, close, read and write files
-What are file descriptors
-What are the 3 standard file descriptors, what are their purpose and what are their POSIX names
-How to use the I/O system calls open, close, read and write
-What are and how to use the flags O_RDONLY, O_WRONLY, O_RDWR
-What are file permissions, and how to set them when creating a file with the open system call
-What is a system call
-What is the difference between a function and a system call
-```
+# C - Doubly linked lists
+
+In this project, I learned about using doubly-linked lists in C.
+
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
+## Header File :file_folder:
+
+* [lists.h](./lists.h): Header file containing definitions and prototypes for all types
+and functions written for the project.
+
+| Type/File           | Definition/Prototype           |
+| ------------------- | ------------------------------ |
+| `struct dlistint_s`    | <ul><li>`int n`</li><li>`struct dlistint_s *prev`</li><li>`struct dlistint_s *new`</li></ul> |
+| `typedef dlistint_t`   | `struct dlistint_s`                                                                          |
+| `0-print_dlistint.c`   | `size_t print_dlistint(const dlistint_t *h);`                                                |
+| `1-dlistint_len.c`     | `size_t dlistint_len(const dlistint_t *h);`                                                  |
+| `2-add_dnodeint.c`  | `dlistint_t *add_dnodeint(dlistint_t **head, const int n);`                                     |
+| `3-add_dnodeint_end.c` | `dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);`                              |
+| `4-free_dlistint.c`    | `void free_dlistint(dlistint_t *head);`                                                      |
+| `5-get_dnodeint.c`     | `dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);`                   |
+| `6-sum_dlistint.c`     | `int sum_dlistint(dlistint_t *head);`                                                        |
+| `7-insert_dnodeint.c`  | `dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);`             |
+| `8-delete_dnodeint.c`  | `int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);`                       |
+
+## Tasks :page_with_curl:
+
+* **0. Print list**
+  * [0-print_dlistint.c](./0-print_dlinstint.c): C function that prints all the elements
+  of a doubly-linked `dlistint_t` list.
+  * Returns the number of nodes in the list.
+
+* **1. List length**
+  * [1-dlistint_len.c](./1-dlistint_len.c): C function that returns the number of nodes in
+  a doubly-linked `dlistint_t` list.
+
+* **2. Add node**
+  * [2-add_dnodeint.c](./2-add_dnodeint.c): C function that adds a new node at the
+  beginning of a doubly-linked `dlistint_t` list.
+  * If the function fails - returns `NULL`.
+  * Otherwise - returns the address of the new element.
+
+* **3. Add node at the end**
+  * [3-add_dnodeint_end.c](./3-add_dnodeint_end.c): C function that adds a new
+  node at the end of a doubly-linked `dlistint_t` list.
+  * If the function fails - returns `NULL`.
+  * Otherwise - returns the address of the new element.
+
+* **4. Free list**
+  * [4-free_dlistint.c](./4-free_dlistint.c): C function that frees a
+  doubly-linked `dlistint_t` list.
+
+* **5. Get node at index**
+  * [5-get_dnodeint.c](./5-get_dnodeint.c): C function that locates a given node of a
+  doubly-linked `dlistint_t` list.
+  * The parameter `index` is the index of the node to locate - indices start at `0`.
+  * If the node does not exist - returns `NULL`.
+  * Otherwise - returns the address of the located node.
+
+* **6. Sum list**
+  * [6-sum_dlistint.c](./6-sum_dlistint.c): C function that sums all the data (`n`)
+  of a doubly-linked `dlistint_t` list.
+  * If the list is empty - returns `0`.
+  * Otherwise - returns the sum of all the data (`n`).
+
+* **7. Insert at index**
+  * [7-insert_dnodeint.c](./7-insert_dnodeint.c): C function that inserts a new node at a
+  given position.
+  * The parameter `idx` is the index of the list where the new node should
+  be added - indices start at `0`.
+  * If the function fails - returns `NULL`.
+  * Otherwise - returns the address of the new element.
+  * Requires compilation with functions defined in [2-add_dnodeint.c](./2-add_dnodeint.c)
+  and [3-add_dnodeint_end.c](./3-add_dnodeint_end.c).
+
+* **8. Delete at index**
+  * [8-delete_dnodeint.c](./8-delete_dnodeint.c): C function that deletes the node at
+  index `index` of a doubly-linked `dlistint_t` list.
+  * The paramter `index` is the index of the node to delete - indices start at `0`.
+  * If the function fails - returns `-1`.
+  * Otherwise - returns `1`.
+
+* **9. Crackme4**
+  * [100-password](./100-password): Text file containing the password for the
+  [crackme4](https://github.com/holbertonschool/0x16.c) executable.
+  #### Use the following command on your terminal for your code to be checked currectly `echo -n "906609" > 102-result`
+
+* **10. Palindromes**
+  * [102-result](./102-result): Text file containing the largest palindrome made from a
+  product of two three-digit numbers.
+
+* **11. Crackme5**
+  * [103-keygen.c](./103-keygen.c): C function that generates passwords for the
+  [crackme5](https://github.com/holbertonschool/0x16.c) executable.
+  * Usage of the crackme: `./crackme5 username key`
+  * Usage of the keygen: `./keygen5 username`
